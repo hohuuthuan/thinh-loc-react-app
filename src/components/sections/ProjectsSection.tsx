@@ -11,10 +11,10 @@ export const ProjectsSection = () => {
     : PROJECTS.filter(p => p.category === filter);
 
   const filters = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'residential', label: 'Residential' },
-    { id: 'commercial', label: 'Commercial' },
-    { id: 'industrial', label: 'Industrial' },
+    { id: 'all', label: 'Tất cả' },
+    { id: 'residential', label: 'Dân dụng' },
+    { id: 'commercial', label: 'Thương mại' },
+    { id: 'industrial', label: 'Công nghiệp' },
   ];
 
   return (
@@ -22,9 +22,9 @@ export const ProjectsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollAnimation direction="up" className="text-center mb-16">
-          <h2 className="section-title mb-4">Featured Projects</h2>
+          <h2 className="section-title mb-4">Dự Án Tiêu Biểu</h2>
           <p className="section-subtitle">
-            Showcasing our expertise across diverse project types and scales
+            Minh chứng cho năng lực và sự tận tâm của chúng tôi qua các công trình đa quy mô và lĩnh vực
           </p>
         </ScrollAnimation>
 
@@ -79,13 +79,13 @@ export const ProjectsSection = () => {
                       whileTap={{ scale: 0.95 }}
                       className="w-full bg-primary-600 hover:bg-primary-700 px-4 py-2 rounded-lg font-semibold transition-colors"
                     >
-                      View Details
+                      Xem Chi Tiết
                     </motion.button>
                   </div>
 
                   {/* Category Tag */}
                   <div className="absolute top-4 right-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold capitalize">
-                    {project.category}
+                    {project.category === 'residential' ? 'Dân dụng' : project.category === 'commercial' ? 'Thương mại' : 'Công nghiệp'}
                   </div>
                 </div>
               </ScrollAnimation>

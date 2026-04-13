@@ -9,7 +9,7 @@ export const PartnersSection = () => {
         {/* Section Header */}
         <ScrollAnimation direction="up" className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-dark-900">
-            Trusted by Industry Leaders
+            Đối Tác Tin Cậy Của Các Đơn Vị Hàng Đầu
           </h2>
         </ScrollAnimation>
 

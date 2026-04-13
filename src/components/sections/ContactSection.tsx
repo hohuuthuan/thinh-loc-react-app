@@ -22,12 +22,12 @@ export const ContactSection = () => {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.name.trim()) newErrors.name = 'Vui lòng nhập họ tên';
     if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      newErrors.email = 'Valid email is required';
+      newErrors.email = 'Email không hợp lệ';
     }
-    if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
+    if (!formData.phone.trim()) newErrors.phone = 'Vui lòng nhập số điện thoại';
+    if (!formData.message.trim()) newErrors.message = 'Vui lòng nhập nội dung tin nhắn';
 
     return newErrors;
   };
@@ -62,9 +62,9 @@ export const ContactSection = () => {
           {/* Left Column - Contact Info */}
           <ScrollAnimation direction="left">
             <div>
-              <h2 className="section-title mb-6">Get in Touch</h2>
+              <h2 className="section-title mb-6">Liên Hệ Với Chúng Tôi</h2>
               <p className="text-gray-600 text-lg mb-8">
-                Ready to start your next project? Contact us today and let's discuss how we can help bring your vision to life.
+                Bạn đã sẵn sàng cho dự án tiếp theo? Hãy liên hệ với chúng tôi ngay hôm nay để thảo luận về cách chúng tôi có thể giúp hiện thực hóa tầm nhìn của bạn.
               </p>
 
               {/* Contact Details */}
@@ -72,20 +72,20 @@ export const ContactSection = () => {
                 {[
                   {
                     icon: '📞',
-                    label: 'Phone',
-                    value: '+1 (234) 567-890',
-                    href: 'tel:+12345678900',
+                    label: 'Điện thoại',
+                    value: '+84 (028) 123 4567',
+                    href: 'tel:+84281234567',
                   },
                   {
                     icon: '✉️',
                     label: 'Email',
-                    value: 'info@buildco.com',
-                    href: 'mailto:info@buildco.com',
+                    value: 'lienhe@thinhloc.com',
+                    href: 'mailto:lienhe@thinhloc.com',
                   },
                   {
                     icon: '📍',
-                    label: 'Location',
-                    value: '123 Construction Ave, Building City, BC 12345',
+                    label: 'Địa chỉ',
+                    value: '123 Đường Xây Dựng, Quận 1, TP. Hồ Chí Minh',
                     href: '#',
                   },
                 ].map((item, index) => (
@@ -113,11 +113,11 @@ export const ContactSection = () => {
 
               {/* Business Hours */}
               <div className="mt-12 p-6 bg-white rounded-lg shadow-lg">
-                <h4 className="font-bold text-dark-900 mb-3">Business Hours</h4>
+                <h4 className="font-bold text-dark-900 mb-3">Giờ Làm Việc</h4>
                 <div className="space-y-2 text-gray-600 text-sm">
-                  <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                  <p>Saturday: 9:00 AM - 3:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>Thứ Hai - Thứ Sáu: 8:00 AM - 6:00 PM</p>
+                  <p>Thứ Bảy: 9:00 AM - 3:00 PM</p>
+                  <p>Chủ Nhật: Nghỉ</p>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ export const ContactSection = () => {
                   exit={{ opacity: 0, y: -10 }}
                   className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center font-semibold"
                 >
-                  ✓ Thank you! We'll be in touch soon.
+                  ✓ Cảm ơn bạn! Chúng tôi sẽ liên hệ lại sớm nhất có thể.
                 </motion.div>
               )}
 
@@ -141,7 +141,7 @@ export const ContactSection = () => {
                 {/* Name */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-dark-900 mb-2">
-                    Full Name
+                    Họ và Tên
                   </label>
                   <input
                     type="text"
@@ -154,7 +154,7 @@ export const ContactSection = () => {
                         ? 'border-red-500 focus:border-red-600'
                         : 'border-gray-300 focus:border-primary-600'
                     } focus:outline-none`}
-                    placeholder="Your name"
+                    placeholder="Nhập họ tên của bạn"
                   />
                   {errors.name && (
                     <p className="mt-1 text-sm text-red-500">{errors.name}</p>
@@ -164,7 +164,7 @@ export const ContactSection = () => {
                 {/* Email */}
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-dark-900 mb-2">
-                    Email Address
+                    Địa chỉ Email
                   </label>
                   <input
                     type="email"
@@ -177,7 +177,7 @@ export const ContactSection = () => {
                         ? 'border-red-500 focus:border-red-600'
                         : 'border-gray-300 focus:border-primary-600'
                     } focus:outline-none`}
-                    placeholder="your@email.com"
+                    placeholder="vidu@email.com"
                   />
                   {errors.email && (
                     <p className="mt-1 text-sm text-red-500">{errors.email}</p>
@@ -187,7 +187,7 @@ export const ContactSection = () => {
                 {/* Phone */}
                 <div>
                   <label htmlFor="phone" className="block text-sm font-semibold text-dark-900 mb-2">
-                    Phone Number
+                    Số Điện Thoại
                   </label>
                   <input
                     type="tel"
@@ -200,7 +200,7 @@ export const ContactSection = () => {
                         ? 'border-red-500 focus:border-red-600'
                         : 'border-gray-300 focus:border-primary-600'
                     } focus:outline-none`}
-                    placeholder="+1 (123) 456-7890"
+                    placeholder="09xx xxx xxx"
                   />
                   {errors.phone && (
                     <p className="mt-1 text-sm text-red-500">{errors.phone}</p>
@@ -210,7 +210,7 @@ export const ContactSection = () => {
                 {/* Message */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-dark-900 mb-2">
-                    Message
+                    Nội dung tin nhắn
                   </label>
                   <textarea
                     id="message"
@@ -223,7 +223,7 @@ export const ContactSection = () => {
                         ? 'border-red-500 focus:border-red-600'
                         : 'border-gray-300 focus:border-primary-600'
                     } focus:outline-none`}
-                    placeholder="Tell us about your project..."
+                    placeholder="Mô tả dự án hoặc yêu cầu của bạn..."
                   />
                   {errors.message && (
                     <p className="mt-1 text-sm text-red-500">{errors.message}</p>
@@ -237,7 +237,7 @@ export const ContactSection = () => {
                   type="submit"
                   className="w-full btn-primary py-4 font-bold text-lg"
                 >
-                  Send Message
+                  Gửi Yêu Cầu
                 </motion.button>
               </div>
             </form>

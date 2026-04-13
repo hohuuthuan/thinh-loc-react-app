@@ -8,9 +8,9 @@ export const WorkflowSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollAnimation direction="up" className="text-center mb-16">
-          <h2 className="section-title mb-4">Our Process</h2>
+          <h2 className="section-title mb-4">Quy Trình Làm Việc</h2>
           <p className="section-subtitle">
-            A streamlined approach to delivering excellence from start to finish
+            Các bước triển khai chuyên nghiệp giúp hiện thực hóa ý tưởng của bạn một cách tối ưu
           </p>
         </ScrollAnimation>
 

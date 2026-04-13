@@ -8,9 +8,9 @@ export const BlogSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <ScrollAnimation direction="up" className="text-center mb-16">
-          <h2 className="section-title mb-4">Latest Blog Posts</h2>
+          <h2 className="section-title mb-4">Tin Tức & Sự Kiện</h2>
           <p className="section-subtitle">
-            Insights and updates from the construction industry
+            Cập nhật những xu hướng, kiến thức và dự án mới nhất từ đội ngũ chuyên gia của chúng tôi
           </p>
         </ScrollAnimation>
 
@@ -43,7 +43,7 @@ export const BlogSection = () => {
                 {/* Content */}
                 <div className="p-6 flex flex-col flex-grow">
                   <p className="text-sm text-gray-500 mb-2">
-                    {new Date(post.date).toLocaleDateString('en-US', {
+                    {new Date(post.date).toLocaleDateString('vi-VN', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric',
@@ -59,7 +59,7 @@ export const BlogSection = () => {
                     whileHover={{ gap: '0.5rem' }}
                     className="inline-flex items-center text-primary-600 font-bold hover:text-primary-700 transition-colors"
                   >
-                    Read More →
+                    Xem Thêm →
                   </motion.button>
                 </div>
               </motion.div>

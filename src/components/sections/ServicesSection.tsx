@@ -6,11 +6,10 @@ export const ServicesSection = () => {
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <ScrollAnimation direction="up" className="text-center mb-16">
-          <h2 className="section-title mb-4">Our Services</h2>
+          <h2 className="section-title mb-4">Dịch Vụ</h2>
           <p className="section-subtitle">
-            Comprehensive construction solutions tailored to meet your unique needs
+            Cung cấp các giải pháp xây dựng toàn diện, đáp ứng mọi nhu cầu từ dân dụng đến công nghiệp
           </p>
         </ScrollAnimation>
 

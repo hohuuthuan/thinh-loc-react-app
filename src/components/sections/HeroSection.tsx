@@ -27,7 +27,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="text-5xl md:text-7xl font-bold leading-tight mb-6"
         >
-          Building Strong Foundations for the Future
+          Xây Dựng Những Giá Trị Bền Vững Cho Tương Lai
         </motion.h1>
 
         <motion.p
@@ -36,7 +36,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto"
         >
-          Expert construction solutions designed with precision and delivered with excellence
+          Giải pháp thi công chuyên nghiệp, thiết kế tinh tế và cam kết chất lượng vượt trội từ chuyên gia hơn 25 năm kinh nghiệm.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -44,20 +44,25 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
-          className="flex flex-col sm:flex-row justify-center gap-4"
+          className="flex flex-col sm:flex-row justify-center gap-6"
         >
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(245, 158, 11, 0.4)" }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('projects')}
-            className="btn-primary bg-white text-dark-900 hover:bg-gray-100 px-8 py-3 font-semibold rounded-lg transition-all duration-300"
+            className="bg-primary-600 hover:bg-primary-700 text-white px-10 py-4 font-bold rounded-lg transition-all duration-300 shadow-xl text-lg flex items-center justify-center gap-2 group"
           >
-            View Projects
-          </button>
-          <button
+            Dự án tiêu biểu 
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('contact')}
-            className="btn-secondary border-2 border-white text-white hover:bg-white hover:text-dark-900 px-8 py-3 font-semibold rounded-lg transition-all duration-300"
+            className="border-2 border-white text-white backdrop-blur-sm px-10 py-4 font-bold rounded-lg transition-all duration-300 text-lg"
           >
-            Contact Us
-          </button>
+            Liên hệ ngay
+          </motion.button>
         </motion.div>
       </div>
 
